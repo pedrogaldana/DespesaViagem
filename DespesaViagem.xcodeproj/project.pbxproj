@@ -1,0 +1,810 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		885052122C056E84002D22B3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885052112C056E84002D22B3 /* CustomButton.swift */; };
+		885052162C057C21002D22B3 /* ErrorSnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885052152C057C21002D22B3 /* ErrorSnackBar.swift */; };
+		885052182C0690A0002D22B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885052172C0690A0002D22B3 /* User.swift */; };
+		8850521A2C069121002D22B3 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885052192C069121002D22B3 /* FirestoreService.swift */; };
+		8850521C2C06916A002D22B3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8850521B2C06916A002D22B3 /* FirebaseFirestore */; };
+		8850521E2C077871002D22B3 /* TravelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8850521D2C077871002D22B3 /* TravelViewModel.swift */; };
+		885052232C07F141002D22B3 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885052222C07F141002D22B3 /* AccountView.swift */; };
+		885052252C08F4DF002D22B3 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 885052242C08F4DF002D22B3 /* FirebaseFirestoreSwift */; };
+		88787E5F2BFB80AD00EF0D39 /* DespesaViagemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787E5E2BFB80AD00EF0D39 /* DespesaViagemApp.swift */; };
+		88787E612BFB80AD00EF0D39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787E602BFB80AD00EF0D39 /* ContentView.swift */; };
+		88787E632BFB80AE00EF0D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88787E622BFB80AE00EF0D39 /* Assets.xcassets */; };
+		88787E662BFB80AE00EF0D39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88787E652BFB80AE00EF0D39 /* Preview Assets.xcassets */; };
+		88787E702BFB80AE00EF0D39 /* DespesaViagemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787E6F2BFB80AE00EF0D39 /* DespesaViagemTests.swift */; };
+		88787E7A2BFB80AE00EF0D39 /* DespesaViagemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787E792BFB80AE00EF0D39 /* DespesaViagemUITests.swift */; };
+		88787E7C2BFB80AE00EF0D39 /* DespesaViagemUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88787E7B2BFB80AE00EF0D39 /* DespesaViagemUITestsLaunchTests.swift */; };
+		8895A8992C0A1754003A6CA0 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895A8982C0A1754003A6CA0 /* ExpenseViewModel.swift */; };
+		8895A89B2C10B491003A6CA0 /* TravelUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895A89A2C10B491003A6CA0 /* TravelUtils.swift */; };
+		8895A89D2C150B34003A6CA0 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895A89C2C150B34003A6CA0 /* CurrencyTextField.swift */; };
+		88E74D292BFC07BE00C5A003 /* AddTravelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E74D282BFC07BE00C5A003 /* AddTravelView.swift */; };
+		88E74D2E2BFC14CB00C5A003 /* TravelListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E74D2D2BFC14CB00C5A003 /* TravelListItemView.swift */; };
+		88E74D302BFC2EB300C5A003 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E74D2F2BFC2EB300C5A003 /* Travel.swift */; };
+		88E74D332BFC323E00C5A003 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E74D322BFC323E00C5A003 /* Expense.swift */; };
+		88E74D372BFE3BA300C5A003 /* TravelIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E74D362BFE3BA300C5A003 /* TravelIcons.swift */; };
+		88E74D3B2C00E06C00C5A003 /* TravelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E74D3A2C00E06C00C5A003 /* TravelDetailView.swift */; };
+		88E74D3D2C023AA100C5A003 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E74D3C2C023AA100C5A003 /* AddExpenseView.swift */; };
+		88E74D402C03E8B100C5A003 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 88E74D3F2C03E8B100C5A003 /* FirebaseAnalytics */; };
+		88E74D422C03E8B100C5A003 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 88E74D412C03E8B100C5A003 /* FirebaseAnalyticsOnDeviceConversion */; };
+		88E74D442C03E8B100C5A003 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 88E74D432C03E8B100C5A003 /* FirebaseAnalyticsSwift */; };
+		88E74D462C03E8B100C5A003 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 88E74D452C03E8B100C5A003 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		88E74D4B2C03EA8D00C5A003 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88E74D4A2C03EA8D00C5A003 /* GoogleService-Info.plist */; };
+		88E74D4D2C03EF2B00C5A003 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E74D4C2C03EF2B00C5A003 /* LoginView.swift */; };
+		88E74D502C04D59C00C5A003 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E74D4F2C04D59C00C5A003 /* AuthViewModel.swift */; };
+		88E74D532C04DA5B00C5A003 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 88E74D522C04DA5B00C5A003 /* FirebaseAuth */; };
+		88E74D552C04DAC200C5A003 /* MainTravelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E74D542C04DAC200C5A003 /* MainTravelView.swift */; };
+		88E74D572C04DB7200C5A003 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E74D562C04DB7200C5A003 /* SignUpView.swift */; };
+		88E74D5A2C054FD000C5A003 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E74D592C054FD000C5A003 /* RoundedTextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88787E6C2BFB80AE00EF0D39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88787E532BFB80AD00EF0D39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88787E5A2BFB80AD00EF0D39;
+			remoteInfo = DespesaViagem;
+		};
+		88787E762BFB80AE00EF0D39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88787E532BFB80AD00EF0D39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88787E5A2BFB80AD00EF0D39;
+			remoteInfo = DespesaViagem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		885052112C056E84002D22B3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		885052152C057C21002D22B3 /* ErrorSnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorSnackBar.swift; sourceTree = "<group>"; };
+		885052172C0690A0002D22B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		885052192C069121002D22B3 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		8850521D2C077871002D22B3 /* TravelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewModel.swift; sourceTree = "<group>"; };
+		885052222C07F141002D22B3 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		88787E5B2BFB80AD00EF0D39 /* Despesas de Viagem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Despesas de Viagem.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88787E5E2BFB80AD00EF0D39 /* DespesaViagemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DespesaViagemApp.swift; sourceTree = "<group>"; };
+		88787E602BFB80AD00EF0D39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		88787E622BFB80AE00EF0D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88787E652BFB80AE00EF0D39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		88787E6B2BFB80AE00EF0D39 /* DespesaViagemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DespesaViagemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88787E6F2BFB80AE00EF0D39 /* DespesaViagemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DespesaViagemTests.swift; sourceTree = "<group>"; };
+		88787E752BFB80AE00EF0D39 /* DespesaViagemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DespesaViagemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88787E792BFB80AE00EF0D39 /* DespesaViagemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DespesaViagemUITests.swift; sourceTree = "<group>"; };
+		88787E7B2BFB80AE00EF0D39 /* DespesaViagemUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DespesaViagemUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8895A8982C0A1754003A6CA0 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
+		8895A89A2C10B491003A6CA0 /* TravelUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelUtils.swift; sourceTree = "<group>"; };
+		8895A89C2C150B34003A6CA0 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
+		88E74D282BFC07BE00C5A003 /* AddTravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTravelView.swift; sourceTree = "<group>"; };
+		88E74D2D2BFC14CB00C5A003 /* TravelListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelListItemView.swift; sourceTree = "<group>"; };
+		88E74D2F2BFC2EB300C5A003 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
+		88E74D322BFC323E00C5A003 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		88E74D362BFE3BA300C5A003 /* TravelIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelIcons.swift; sourceTree = "<group>"; };
+		88E74D3A2C00E06C00C5A003 /* TravelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailView.swift; sourceTree = "<group>"; };
+		88E74D3C2C023AA100C5A003 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
+		88E74D4A2C03EA8D00C5A003 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88E74D4C2C03EF2B00C5A003 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		88E74D4F2C04D59C00C5A003 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		88E74D542C04DAC200C5A003 /* MainTravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTravelView.swift; sourceTree = "<group>"; };
+		88E74D562C04DB7200C5A003 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		88E74D592C054FD000C5A003 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88787E582BFB80AD00EF0D39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88E74D442C03E8B100C5A003 /* FirebaseAnalyticsSwift in Frameworks */,
+				88E74D532C04DA5B00C5A003 /* FirebaseAuth in Frameworks */,
+				88E74D402C03E8B100C5A003 /* FirebaseAnalytics in Frameworks */,
+				885052252C08F4DF002D22B3 /* FirebaseFirestoreSwift in Frameworks */,
+				88E74D422C03E8B100C5A003 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				88E74D462C03E8B100C5A003 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				8850521C2C06916A002D22B3 /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88787E682BFB80AE00EF0D39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88787E722BFB80AE00EF0D39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8850521F2C07EB35002D22B3 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				885052192C069121002D22B3 /* FirestoreService.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		88787E522BFB80AD00EF0D39 = {
+			isa = PBXGroup;
+			children = (
+				88787E5D2BFB80AD00EF0D39 /* DespesaViagem */,
+				88787E6E2BFB80AE00EF0D39 /* DespesaViagemTests */,
+				88787E782BFB80AE00EF0D39 /* DespesaViagemUITests */,
+				88787E5C2BFB80AD00EF0D39 /* Products */,
+				88E74D512C04DA5B00C5A003 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		88787E5C2BFB80AD00EF0D39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88787E5B2BFB80AD00EF0D39 /* Despesas de Viagem.app */,
+				88787E6B2BFB80AE00EF0D39 /* DespesaViagemTests.xctest */,
+				88787E752BFB80AE00EF0D39 /* DespesaViagemUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88787E5D2BFB80AD00EF0D39 /* DespesaViagem */ = {
+			isa = PBXGroup;
+			children = (
+				8850521F2C07EB35002D22B3 /* Firebase */,
+				88E74D582C054FBC00C5A003 /* Components */,
+				88E74D4E2C04D58A00C5A003 /* Login */,
+				88E74D312BFC322700C5A003 /* Expense */,
+				88E74D2A2BFC148700C5A003 /* Travel */,
+				88787E5E2BFB80AD00EF0D39 /* DespesaViagemApp.swift */,
+				88787E602BFB80AD00EF0D39 /* ContentView.swift */,
+				88E74D4A2C03EA8D00C5A003 /* GoogleService-Info.plist */,
+				88787E622BFB80AE00EF0D39 /* Assets.xcassets */,
+				88787E642BFB80AE00EF0D39 /* Preview Content */,
+			);
+			path = DespesaViagem;
+			sourceTree = "<group>";
+		};
+		88787E642BFB80AE00EF0D39 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				88787E652BFB80AE00EF0D39 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		88787E6E2BFB80AE00EF0D39 /* DespesaViagemTests */ = {
+			isa = PBXGroup;
+			children = (
+				88787E6F2BFB80AE00EF0D39 /* DespesaViagemTests.swift */,
+			);
+			path = DespesaViagemTests;
+			sourceTree = "<group>";
+		};
+		88787E782BFB80AE00EF0D39 /* DespesaViagemUITests */ = {
+			isa = PBXGroup;
+			children = (
+				88787E792BFB80AE00EF0D39 /* DespesaViagemUITests.swift */,
+				88787E7B2BFB80AE00EF0D39 /* DespesaViagemUITestsLaunchTests.swift */,
+			);
+			path = DespesaViagemUITests;
+			sourceTree = "<group>";
+		};
+		88E74D2A2BFC148700C5A003 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				88E74D282BFC07BE00C5A003 /* AddTravelView.swift */,
+				88E74D542C04DAC200C5A003 /* MainTravelView.swift */,
+				88E74D2D2BFC14CB00C5A003 /* TravelListItemView.swift */,
+				88E74D2F2BFC2EB300C5A003 /* Travel.swift */,
+				8895A89A2C10B491003A6CA0 /* TravelUtils.swift */,
+				88E74D362BFE3BA300C5A003 /* TravelIcons.swift */,
+				88E74D3A2C00E06C00C5A003 /* TravelDetailView.swift */,
+				8850521D2C077871002D22B3 /* TravelViewModel.swift */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		88E74D312BFC322700C5A003 /* Expense */ = {
+			isa = PBXGroup;
+			children = (
+				88E74D322BFC323E00C5A003 /* Expense.swift */,
+				88E74D3C2C023AA100C5A003 /* AddExpenseView.swift */,
+				8895A8982C0A1754003A6CA0 /* ExpenseViewModel.swift */,
+			);
+			path = Expense;
+			sourceTree = "<group>";
+		};
+		88E74D4E2C04D58A00C5A003 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				88E74D4C2C03EF2B00C5A003 /* LoginView.swift */,
+				88E74D4F2C04D59C00C5A003 /* AuthViewModel.swift */,
+				88E74D562C04DB7200C5A003 /* SignUpView.swift */,
+				885052172C0690A0002D22B3 /* User.swift */,
+				885052222C07F141002D22B3 /* AccountView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		88E74D512C04DA5B00C5A003 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88E74D582C054FBC00C5A003 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				88E74D592C054FD000C5A003 /* RoundedTextField.swift */,
+				885052112C056E84002D22B3 /* CustomButton.swift */,
+				885052152C057C21002D22B3 /* ErrorSnackBar.swift */,
+				8895A89C2C150B34003A6CA0 /* CurrencyTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88787E5A2BFB80AD00EF0D39 /* DespesaViagem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88787E7F2BFB80AE00EF0D39 /* Build configuration list for PBXNativeTarget "DespesaViagem" */;
+			buildPhases = (
+				88787E572BFB80AD00EF0D39 /* Sources */,
+				88787E582BFB80AD00EF0D39 /* Frameworks */,
+				88787E592BFB80AD00EF0D39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DespesaViagem;
+			packageProductDependencies = (
+				88E74D3F2C03E8B100C5A003 /* FirebaseAnalytics */,
+				88E74D412C03E8B100C5A003 /* FirebaseAnalyticsOnDeviceConversion */,
+				88E74D432C03E8B100C5A003 /* FirebaseAnalyticsSwift */,
+				88E74D452C03E8B100C5A003 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				88E74D522C04DA5B00C5A003 /* FirebaseAuth */,
+				8850521B2C06916A002D22B3 /* FirebaseFirestore */,
+				885052242C08F4DF002D22B3 /* FirebaseFirestoreSwift */,
+			);
+			productName = DespesaViagem;
+			productReference = 88787E5B2BFB80AD00EF0D39 /* Despesas de Viagem.app */;
+			productType = "com.apple.product-type.application";
+		};
+		88787E6A2BFB80AE00EF0D39 /* DespesaViagemTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88787E822BFB80AE00EF0D39 /* Build configuration list for PBXNativeTarget "DespesaViagemTests" */;
+			buildPhases = (
+				88787E672BFB80AE00EF0D39 /* Sources */,
+				88787E682BFB80AE00EF0D39 /* Frameworks */,
+				88787E692BFB80AE00EF0D39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88787E6D2BFB80AE00EF0D39 /* PBXTargetDependency */,
+			);
+			name = DespesaViagemTests;
+			productName = DespesaViagemTests;
+			productReference = 88787E6B2BFB80AE00EF0D39 /* DespesaViagemTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		88787E742BFB80AE00EF0D39 /* DespesaViagemUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88787E852BFB80AE00EF0D39 /* Build configuration list for PBXNativeTarget "DespesaViagemUITests" */;
+			buildPhases = (
+				88787E712BFB80AE00EF0D39 /* Sources */,
+				88787E722BFB80AE00EF0D39 /* Frameworks */,
+				88787E732BFB80AE00EF0D39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88787E772BFB80AE00EF0D39 /* PBXTargetDependency */,
+			);
+			name = DespesaViagemUITests;
+			productName = DespesaViagemUITests;
+			productReference = 88787E752BFB80AE00EF0D39 /* DespesaViagemUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88787E532BFB80AD00EF0D39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					88787E5A2BFB80AD00EF0D39 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					88787E6A2BFB80AE00EF0D39 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 88787E5A2BFB80AD00EF0D39;
+					};
+					88787E742BFB80AE00EF0D39 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 88787E5A2BFB80AD00EF0D39;
+					};
+				};
+			};
+			buildConfigurationList = 88787E562BFB80AD00EF0D39 /* Build configuration list for PBXProject "DespesaViagem" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88787E522BFB80AD00EF0D39;
+			packageReferences = (
+				88E74D3E2C03E7D800C5A003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 88787E5C2BFB80AD00EF0D39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88787E5A2BFB80AD00EF0D39 /* DespesaViagem */,
+				88787E6A2BFB80AE00EF0D39 /* DespesaViagemTests */,
+				88787E742BFB80AE00EF0D39 /* DespesaViagemUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88787E592BFB80AD00EF0D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88787E662BFB80AE00EF0D39 /* Preview Assets.xcassets in Resources */,
+				88787E632BFB80AE00EF0D39 /* Assets.xcassets in Resources */,
+				88E74D4B2C03EA8D00C5A003 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88787E692BFB80AE00EF0D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88787E732BFB80AE00EF0D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88787E572BFB80AD00EF0D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88E74D332BFC323E00C5A003 /* Expense.swift in Sources */,
+				88E74D292BFC07BE00C5A003 /* AddTravelView.swift in Sources */,
+				88787E612BFB80AD00EF0D39 /* ContentView.swift in Sources */,
+				885052232C07F141002D22B3 /* AccountView.swift in Sources */,
+				885052122C056E84002D22B3 /* CustomButton.swift in Sources */,
+				8895A89D2C150B34003A6CA0 /* CurrencyTextField.swift in Sources */,
+				88E74D3B2C00E06C00C5A003 /* TravelDetailView.swift in Sources */,
+				88787E5F2BFB80AD00EF0D39 /* DespesaViagemApp.swift in Sources */,
+				88E74D302BFC2EB300C5A003 /* Travel.swift in Sources */,
+				88E74D3D2C023AA100C5A003 /* AddExpenseView.swift in Sources */,
+				88E74D502C04D59C00C5A003 /* AuthViewModel.swift in Sources */,
+				88E74D4D2C03EF2B00C5A003 /* LoginView.swift in Sources */,
+				88E74D572C04DB7200C5A003 /* SignUpView.swift in Sources */,
+				885052162C057C21002D22B3 /* ErrorSnackBar.swift in Sources */,
+				8895A89B2C10B491003A6CA0 /* TravelUtils.swift in Sources */,
+				88E74D552C04DAC200C5A003 /* MainTravelView.swift in Sources */,
+				885052182C0690A0002D22B3 /* User.swift in Sources */,
+				8850521A2C069121002D22B3 /* FirestoreService.swift in Sources */,
+				8895A8992C0A1754003A6CA0 /* ExpenseViewModel.swift in Sources */,
+				88E74D372BFE3BA300C5A003 /* TravelIcons.swift in Sources */,
+				88E74D5A2C054FD000C5A003 /* RoundedTextField.swift in Sources */,
+				8850521E2C077871002D22B3 /* TravelViewModel.swift in Sources */,
+				88E74D2E2BFC14CB00C5A003 /* TravelListItemView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88787E672BFB80AE00EF0D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88787E702BFB80AE00EF0D39 /* DespesaViagemTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88787E712BFB80AE00EF0D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88787E7A2BFB80AE00EF0D39 /* DespesaViagemUITests.swift in Sources */,
+				88787E7C2BFB80AE00EF0D39 /* DespesaViagemUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88787E6D2BFB80AE00EF0D39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88787E5A2BFB80AD00EF0D39 /* DespesaViagem */;
+			targetProxy = 88787E6C2BFB80AE00EF0D39 /* PBXContainerItemProxy */;
+		};
+		88787E772BFB80AE00EF0D39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88787E5A2BFB80AD00EF0D39 /* DespesaViagem */;
+			targetProxy = 88787E762BFB80AE00EF0D39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		88787E7D2BFB80AE00EF0D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		88787E7E2BFB80AE00EF0D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88787E802BFB80AE00EF0D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DespesaViagem/Preview Content\"";
+				DEVELOPMENT_TEAM = 92796TUQH7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Despesas;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.pedrogaldana.DespesaViagem;
+				PRODUCT_NAME = "Despesas de Viagem";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88787E812BFB80AE00EF0D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DespesaViagem/Preview Content\"";
+				DEVELOPMENT_TEAM = 92796TUQH7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Despesas;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.pedrogaldana.DespesaViagem;
+				PRODUCT_NAME = "Despesas de Viagem";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		88787E832BFB80AE00EF0D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.pedrogaldana.DespesaViagemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DespesaViagem.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DespesaViagem";
+			};
+			name = Debug;
+		};
+		88787E842BFB80AE00EF0D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.pedrogaldana.DespesaViagemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DespesaViagem.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DespesaViagem";
+			};
+			name = Release;
+		};
+		88787E862BFB80AE00EF0D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.pedrogaldana.DespesaViagemUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DespesaViagem;
+			};
+			name = Debug;
+		};
+		88787E872BFB80AE00EF0D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.pedrogaldana.DespesaViagemUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DespesaViagem;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88787E562BFB80AD00EF0D39 /* Build configuration list for PBXProject "DespesaViagem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88787E7D2BFB80AE00EF0D39 /* Debug */,
+				88787E7E2BFB80AE00EF0D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88787E7F2BFB80AE00EF0D39 /* Build configuration list for PBXNativeTarget "DespesaViagem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88787E802BFB80AE00EF0D39 /* Debug */,
+				88787E812BFB80AE00EF0D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88787E822BFB80AE00EF0D39 /* Build configuration list for PBXNativeTarget "DespesaViagemTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88787E832BFB80AE00EF0D39 /* Debug */,
+				88787E842BFB80AE00EF0D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88787E852BFB80AE00EF0D39 /* Build configuration list for PBXNativeTarget "DespesaViagemUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88787E862BFB80AE00EF0D39 /* Debug */,
+				88787E872BFB80AE00EF0D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88E74D3E2C03E7D800C5A003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.26.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8850521B2C06916A002D22B3 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88E74D3E2C03E7D800C5A003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		885052242C08F4DF002D22B3 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88E74D3E2C03E7D800C5A003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		88E74D3F2C03E8B100C5A003 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88E74D3E2C03E7D800C5A003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		88E74D412C03E8B100C5A003 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88E74D3E2C03E7D800C5A003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		88E74D432C03E8B100C5A003 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88E74D3E2C03E7D800C5A003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		88E74D452C03E8B100C5A003 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88E74D3E2C03E7D800C5A003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		88E74D522C04DA5B00C5A003 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88E74D3E2C03E7D800C5A003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 88787E532BFB80AD00EF0D39 /* Project object */;
+}
