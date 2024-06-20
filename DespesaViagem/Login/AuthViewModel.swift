@@ -20,9 +20,7 @@ class AuthViewModel: ObservableObject {
     @Published var isSignedIn: Bool = false
     @Published var user: FirebaseAuth.User?
     @Published var loggedUser: User? = nil
-    
-    @State private var firestoreService = FirestoreService()
-    
+        
     private var authStateListenerHandle: AuthStateDidChangeListenerHandle?
     
     init() {
@@ -69,20 +67,21 @@ class AuthViewModel: ObservableObject {
                     id: user.uid, name: name, email: email
                 )
                 
-                firestoreService.addUser(user: usuario) { result in
-                    switch result {
-                    case .success():
-                        print("Usuário adicionado com sucesso!")
-                        self.showError = false
-                        completion(true)
-                    case .failure(let error):
+                db.collection("Users").document(usuario.id!).setData([
+                    "name": usuario.name,
+                    "email": usuario.email
+                ]) { error in
+                    if let error = error {
                         print("Erro ao adicionar usuário: \(error.localizedDescription)")
                         self.errorMessage = "Não foi possível criar o usuário: \(error.localizedDescription)"
                         self.showError = true
                         completion(false)
+                    } else {
+                        print("Usuário adicionado com sucesso!")
+                        self.showError = false
+                        completion(true)
                     }
                 }
-                
                 
             } else if let error = error {
                 print("Erro ao adicionar usuário: \(error.localizedDescription)")

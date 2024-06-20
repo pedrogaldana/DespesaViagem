@@ -26,9 +26,6 @@ class ExpenseViewModel: ObservableObject {
     
     private var listener: ListenerRegistration?
     private var travelListener: ListenerRegistration?
-
-    
-    @State private var firestoreService = FirestoreService()
     
     private var userId: String?
     
@@ -40,32 +37,18 @@ class ExpenseViewModel: ObservableObject {
     }
     
     func addExpense(expense: Expense, completion: @escaping (Bool) -> Void) {
-        firestoreService.addExpense(userId: userId!, travelId: travel.id!, expense: expense){ result in
-            switch result {
-            case .success():
+        db.collection("Users").document(userId!).collection("Travels").document(travel.id!).collection("Expenses").document(expense.id!).setData([
+            "price": expense.price,
+            "title": expense.title
+        ]) { error in
+            if let error = error {
+                self.showError = false
+                self.updateTotalSpent(by: expense.price)
+                completion(false)
+            } else {
                 self.showError = false
                 self.updateTotalSpent(by: expense.price)
                 completion(true)
-            case .failure(let error):
-                self.errorMessage = "Erro ao adicionar despesa: \(error.localizedDescription)"
-                self.showError = true
-                completion(false)
-            }
-        }
-    }
-    
-    func getExpenseList(travelId: String){
-        if userId != nil {
-            firestoreService.fetchExpenses(userId: userId!, travelId: travelId) { result in
-                switch result {
-                case.success(let expenses):
-                    expenses.forEach { item in self.currentExpense += item.price }
-                    self.showError = false
-                    self.expenseList = expenses
-                case .failure(let error):
-                    self.errorMessage = "Erro ao adicionar despesa: \(error.localizedDescription)"
-                    self.showError = true
-                }
             }
         }
     }
@@ -89,40 +72,41 @@ class ExpenseViewModel: ObservableObject {
     }
     
     func deleteExpense(travel: Travel, expense: Expense, completion: @escaping (Bool) -> Void) {
-        firestoreService.deleteExpense(userId: userId!, travelId: travel.id!, expenseId: expense.id!) { result in
-            switch result {
-            case .success():
-                self.showError = false
-                completion(true)
-                self.updateTotalSpent(by: -expense.price)
-            case .failure(let error):
+        db.collection("Users").document(userId!).collection("Travels").document(travel.id!).collection("Expenses").document(expense.id!).delete { error in
+            if let error = error {
                 self.errorMessage = "Erro ao deletar gasto: \(error.localizedDescription)"
                 self.showError = true
                 completion(false)
+                print("Error deleting document: \(error)")
+            } else {
+                self.showError = false
+                self.updateTotalSpent(by: -expense.price)
+                completion(true)
+                print("Document successfully deleted")
             }
         }
     }
     
     func fetchTravel() {
         travelListener = db.collection("Users").document(userId!).collection("Travels").document(travel.id!).addSnapshotListener { documentSnapshot, error in
-                if let error = error {
-                    print("Error fetching trip: \(error.localizedDescription)")
-                    return
-                }
-                if let document = documentSnapshot, document.exists {
-                    self.travel = try! document.data(as: Travel.self)
-                }
+            if let error = error {
+                print("Error fetching trip: \(error.localizedDescription)")
+                return
+            }
+            if let document = documentSnapshot, document.exists {
+                self.travel = try! document.data(as: Travel.self)
             }
         }
+    }
     
     private func updateTotalSpent(by amount: Double) {
         travel.currentExpense += amount
-            do {
-                try db.collection("Users").document(userId!).collection("Travels").document(travel.id!).setData(from: travel, merge: true)
-            } catch {
-                print("Error updating total spent: \(error.localizedDescription)")
-            }
+        do {
+            try db.collection("Users").document(userId!).collection("Travels").document(travel.id!).setData(from: travel, merge: true)
+        } catch {
+            print("Error updating total spent: \(error.localizedDescription)")
         }
+    }
     
     deinit {
         listener?.remove()
