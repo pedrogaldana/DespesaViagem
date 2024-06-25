@@ -60,20 +60,20 @@ struct AddExpenseView: View {
                                 .foregroundStyle(.gray)
                         })
                 )
-            }
-            
-            VStack {
-                Spacer()
-                if expenseViewModel.showError {
-                    ErrorSnackBar(message: expenseViewModel.errorMessage)
-                        .transition(.move(edge: .bottom))
-                        .animation(.easeInOut(duration: 0.5))
-                        .padding(.bottom, 32)
-                        .onAppear(perform: {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                                expenseViewModel.showError = false
-                            }
-                        })
+                
+                VStack {
+                    Spacer()
+                    if expenseViewModel.showError {
+                        ErrorSnackBar(message: expenseViewModel.errorMessage)
+                            .transition(.move(edge: .bottom))
+                            .animation(.easeInOut(duration: 0.5))
+                            .padding(.bottom, 32)
+                            .onAppear(perform: {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                                    expenseViewModel.showError = false
+                                }
+                            })
+                    }
                 }
             }
         }
@@ -81,13 +81,33 @@ struct AddExpenseView: View {
     
     func addExpense(){
         isLoading = true
-        var expense = Expense(id: UUID().uuidString, title: self.title, price: self.price)
-        expenseViewModel.addExpense(expense: expense){ success in
-            isLoading = false
-            if success {
-                self.showAddExpenseView = false
+        if validateFields() {
+            var expense = Expense(id: UUID().uuidString, title: self.title, price: self.price)
+            expenseViewModel.addExpense(expense: expense){ success in
+                isLoading = false
+                if success {
+                    self.showAddExpenseView = false
+                }
             }
+        } else
+        {
+            isLoading = false
         }
+    }
+    
+    func validateFields() -> Bool {
+        let errors = [
+            self.title.isEmpty ? "Preencher campo Descrição\n" : "",
+            self.price.isZero ? "Preencher campo Valor" : ""
+        ].joined()
+        
+        guard errors.isEmpty else {
+            expenseViewModel.errorMessage = errors.trimmingCharacters(in: .whitespacesAndNewlines)
+            expenseViewModel.showError = true
+            return false
+        }
+        
+        return true
     }
 }
 

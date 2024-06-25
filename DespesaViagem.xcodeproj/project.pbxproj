@@ -10,7 +10,6 @@
 		885052122C056E84002D22B3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885052112C056E84002D22B3 /* CustomButton.swift */; };
 		885052162C057C21002D22B3 /* ErrorSnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885052152C057C21002D22B3 /* ErrorSnackBar.swift */; };
 		885052182C0690A0002D22B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885052172C0690A0002D22B3 /* User.swift */; };
-		8850521A2C069121002D22B3 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885052192C069121002D22B3 /* FirestoreService.swift */; };
 		8850521C2C06916A002D22B3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8850521B2C06916A002D22B3 /* FirebaseFirestore */; };
 		8850521E2C077871002D22B3 /* TravelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8850521D2C077871002D22B3 /* TravelViewModel.swift */; };
 		885052232C07F141002D22B3 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885052222C07F141002D22B3 /* AccountView.swift */; };
@@ -66,7 +65,6 @@
 		885052112C056E84002D22B3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		885052152C057C21002D22B3 /* ErrorSnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorSnackBar.swift; sourceTree = "<group>"; };
 		885052172C0690A0002D22B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		885052192C069121002D22B3 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		8850521D2C077871002D22B3 /* TravelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewModel.swift; sourceTree = "<group>"; };
 		885052222C07F141002D22B3 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		88787E5B2BFB80AD00EF0D39 /* Despesas de Viagem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Despesas de Viagem.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,14 +127,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8850521F2C07EB35002D22B3 /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				885052192C069121002D22B3 /* FirestoreService.swift */,
-			);
-			path = Firebase;
-			sourceTree = "<group>";
-		};
 		88787E522BFB80AD00EF0D39 = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +151,6 @@
 		88787E5D2BFB80AD00EF0D39 /* DespesaViagem */ = {
 			isa = PBXGroup;
 			children = (
-				8850521F2C07EB35002D22B3 /* Firebase */,
 				88E74D582C054FBC00C5A003 /* Components */,
 				88E74D4E2C04D58A00C5A003 /* Login */,
 				88E74D312BFC322700C5A003 /* Expense */,
@@ -415,7 +404,6 @@
 				8895A89B2C10B491003A6CA0 /* TravelUtils.swift in Sources */,
 				88E74D552C04DAC200C5A003 /* MainTravelView.swift in Sources */,
 				885052182C0690A0002D22B3 /* User.swift in Sources */,
-				8850521A2C069121002D22B3 /* FirestoreService.swift in Sources */,
 				8895A8992C0A1754003A6CA0 /* ExpenseViewModel.swift in Sources */,
 				88E74D372BFE3BA300C5A003 /* TravelIcons.swift in Sources */,
 				88E74D5A2C054FD000C5A003 /* RoundedTextField.swift in Sources */,

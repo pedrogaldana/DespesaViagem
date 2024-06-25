@@ -24,24 +24,30 @@ class TravelViewModel: ObservableObject {
     
     private var listener: ListenerRegistration?
     
-    @State private var firestoreService = FirestoreService()
-    
     
     init() {
         self.addTravelSuccess = false
     }
     
     func addTravel(userId: String, travel: Travel, completion: @escaping (Bool) -> Void) {
-            firestoreService.addTravel(userId: userId, travel: travel) { result in
-                switch result {
-                case .success():
-                    self.showError = false
-                    completion(true)
-                case .failure(let error):
-                    self.errorMessage = "Erro ao adicionar viagem: \(error.localizedDescription)"
-                    completion(false)
-                }
-            
+        db.collection("Users").document(userId).collection("Travels").document(travel.id!).setData([
+            "title": travel.title,
+            "description": travel.description ?? "",
+            "icon": travel.icon,
+            "expectedExpense": travel.expectedExpense,
+            "currentExpense": travel.currentExpense,
+            "destination": travel.destination,
+            "startDate": travel.startDate,
+            "endDate": travel.endDate
+        ]) { error in
+            if let error = error {
+                self.showError = true
+                self.errorMessage = "Erro ao adicionar viagem: \(error.localizedDescription)"
+                completion(false)
+            } else {
+                self.showError = false
+                completion(true)
+            }
         }
     }
     
@@ -57,7 +63,6 @@ class TravelViewModel: ObservableObject {
                     }
                 }
                 completion(true)
-//                print("Fetched travels: \(self.travelList)")
             } else if let error = error {
                 print("Error getting documents: \(error)")
                 completion(false)
@@ -66,17 +71,18 @@ class TravelViewModel: ObservableObject {
     }
     
     func deleteTravel(userId: String, travel: Travel, completion: @escaping (Bool) -> Void) {
-        firestoreService.deleteTravel(userId: userId, travelId: travel.id!) { result in
-            switch result {
-            case .success():
-                self.showError = false
-                completion(true)
-            case .failure(let error):
+        db.collection("Users").document(userId).collection("Travels").document(travel.id!).delete { error in
+            if let error = error {
                 self.errorMessage = "Erro ao deletar viagem: \(error.localizedDescription)"
                 self.showError = true
                 completion(false)
+                print("Error deleting document: \(error)")
+            } else {
+                self.showError = false
+                completion(true)
+                print("Document successfully deleted")
             }
-        }        
+        }
     }
     
     deinit {

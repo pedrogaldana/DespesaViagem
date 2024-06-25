@@ -121,16 +121,36 @@ struct AddTravelView: View {
                 id: UUID().uuidString, title: self.title, description: self.description, icon: self.icon, startDate: self.initialDate, endDate: self.finalDate, expectedExpense: self.expectedExpense, currentExpense: 0.0, destination: self.destination
             )
             
-            isLoading = true
-            travelViewModel.addTravel(userId: authViewModel.loggedUser!.id! ,travel: travel){ success in
-                isLoading = false
-                if success {
-                    self.showAddTravelView = false
+            if validateFields() {
+                isLoading = true
+                travelViewModel.addTravel(userId: authViewModel.loggedUser!.id! ,travel: travel){ success in
+                    isLoading = false
+                    if success {
+                        self.showAddTravelView = false
+                    }
                 }
+            } else {
+                isLoading = false
             }
         } else {
             authViewModel.signOut()
         }
+    }
+    
+    func validateFields() -> Bool {
+        let errors = [
+            self.title.isEmpty ? "Preencher campo Nome da viagem\n" : "",
+            self.destination.isEmpty ? "Preencher campo Destino\n" : "",
+            self.expectedExpense.isZero ? "Preencher campo Gasto esperado" : ""
+        ].joined()
+        
+        guard errors.isEmpty else {
+            travelViewModel.errorMessage = errors.trimmingCharacters(in: .whitespacesAndNewlines)
+            travelViewModel.showError = true
+            return false
+        }
+        
+        return true
     }
 }
 
